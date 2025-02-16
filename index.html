@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Themed Tax Calculator</title>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1E293B',  /* dark gray-blue */
+              secondary: '#0F172A',/* nearly black blue */
+              accent: '#3B82F6',   /* blue accent */
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link your custom CSS after the Tailwind script -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-secondary text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
