@@ -36,8 +36,8 @@ const TaxCalculator = () => {
         setLoading(false);
         return;
       }
-
-      const response = await fetch("https://tax-backend-git-backend-ansh-agarwals-projects-d1e0f0fa.vercel.app/api/tax/calculate", {
+//https://tax-backend-10gf4ftvc-ansh-agarwals-projects-d1e0f0fa.vercel.app/
+      const response = await fetch("https://tax-backend-10gf4ftvc-ansh-agarwals-projects-d1e0f0fa.vercel.app/api/tax/calculate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
