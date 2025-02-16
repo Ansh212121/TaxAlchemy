@@ -10,7 +10,7 @@ const { clerkClient, ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node'); 
 const app = express();
 
 // List of allowed origins for production (add your deployed URLs here)
-const allowedOrigins = ['https://myfrontend.com'];
+const allowedOrigins = ['https://tax-frontend-f0yfqjrkc-ansh-agarwals-projects-d1e0f0fa.vercel.app/'];
 
 // Use a dynamic CORS configuration
 app.use(cors({
