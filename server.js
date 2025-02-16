@@ -9,7 +9,7 @@ const { clerkClient, ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://tax-frontend-f0yfqjrkc-ansh-agarwals-projects-d1e0f0fa.vercel.app'],
+  origin: ['http://localhost:5173', 'https://tax-frontend-f0yfqjrkc-ansh-agarwals-projects-d1e0f0fa.vercel.app/'],
   credentials: true
 }));
 
@@ -141,5 +141,5 @@ app.get('/', (req, res) => {
   res.send('Tax Calculator API is running with Clerk Authentication.');
 });
 
-const PORT = process.env.PORT || 5710;
+const PORT = process.env.PORT || 5110;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
