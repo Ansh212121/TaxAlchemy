@@ -10,8 +10,8 @@ const { clerkClient, ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
 const app = express();
 
 // CORS Middleware
-const cors = require("cors");
 app.use(cors({ origin: "*", credentials: true }));
+
 
 app.use(express.json());
 
