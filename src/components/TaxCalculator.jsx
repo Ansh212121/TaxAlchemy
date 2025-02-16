@@ -37,7 +37,7 @@ const TaxCalculator = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:5710/api/tax/calculate", {
+      const response = await fetch("https://tax-backend-git-backend-ansh-agarwals-projects-d1e0f0fa.vercel.app/api/tax/calculate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

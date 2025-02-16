@@ -20,7 +20,7 @@ const TaxHistory = () => {
         console.log("TaxHistory - Token being sent:", token);
         if (!token) throw new Error("Unauthorized. Please log in.");
 
-        const response = await fetch("http://localhost:5710/api/tax/records", {
+        const response = await fetch("https://tax-backend-git-backend-ansh-agarwals-projects-d1e0f0fa.vercel.app/api/tax/records", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
