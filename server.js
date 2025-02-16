@@ -8,10 +8,10 @@ const mongoose = require('mongoose');
 const { clerkClient, ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
 
 const app = express();
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://tax-frontend-f0yfqjrkc-ansh-agarwals-projects-d1e0f0fa.vercel.app/'],
-  credentials: true
-}));
+
+// CORS Middleware
+const cors = require("cors");
+app.use(cors({ origin: "*", credentials: true }));
 
 app.use(express.json());
 
