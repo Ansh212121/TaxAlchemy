@@ -19,14 +19,16 @@ const TaxHistory = () => {
         const token = await getToken();
         console.log("TaxHistory - Token being sent:", token);
         if (!token) throw new Error("Unauthorized. Please log in.");
+        const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
-        const response = await fetch("https://tax-backend-10gf4ftvc-ansh-agarwals-projects-d1e0f0fa.vercel.app/api/tax/records", {
+        const response = await fetch(`${API_BASE_URL}/api/tax/records`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
         });
+        
 
         console.log("TaxHistory - Response status:", response.status);
         const data = await response.json();
