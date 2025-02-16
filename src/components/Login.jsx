@@ -4,9 +4,9 @@ import { Navigate } from "react-router-dom";
 const Login = () => {
   const { isSignedIn } = useUser();
 
-  // If user is already signed in, redirect them to the home page
+  // Redirect to homepage if already signed in
   if (isSignedIn) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" replace />;
   }
 
   return (
@@ -16,13 +16,13 @@ const Login = () => {
         <p className="text-center text-gray-400 mb-6">
           Sign in to access your dashboard and enjoy exclusive features.
         </p>
-        
-        {/* Embedded Clerk sign-in form */}
-        <SignIn path="/sign-in" routing="path" />
 
-        {/* A separate login button that redirects to Clerk's hosted sign-in page */}
+        {/* Embedded Clerk sign-in form */}
+        <SignIn path="/sign-in" routing="path" redirectUrl="/" />
+
+        {/* Redirecting user to Clerk's hosted sign-in page */}
         <div className="mt-6 text-center">
-          <SignInButton mode="redirect">
+          <SignInButton mode="redirect" redirectUrl="/">
             <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded">
               Login with Clerk
             </button>

@@ -4,7 +4,6 @@ import { Navigate } from "react-router-dom";
 const Signup = () => {
   const { isSignedIn } = useUser();
 
-  // If user is already signed in, redirect them to the home page
   if (isSignedIn) {
     return <Navigate to="/" />;
   }
@@ -19,12 +18,10 @@ const Signup = () => {
           Create your account to transform how you manage your taxes and unlock smarter financial decisions.
         </p>
 
-        {/* Embedded Clerk SignUp Form */}
         <SignUp path="/sign-up" routing="path" />
 
-        {/* Separate SignUp button for redirection */}
         <div className="mt-6 text-center">
-          <SignUpButton mode="redirect">
+          <SignUpButton mode="modal" afterSignUpUrl="/">
             <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-full shadow transition duration-300">
               Sign Up with Clerk
             </button>
