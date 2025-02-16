@@ -27,7 +27,11 @@ const Navbar = () => {
                 History
               </Link>
               <button
-                onClick={() => signOut()}
+                onClick={() => {
+                  signOut(() => {
+                    window.location.href = "/"; // Redirect to home after sign out
+                  });
+                }}
                 className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-5 rounded-full shadow transition duration-200"
               >
                 Sign Out
